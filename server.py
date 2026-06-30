@@ -148,9 +148,9 @@ def coach(request: CoachRequest):
         f"- {task.title} ({task.priority} | {task.estimate_hours}h | Deadline: {task.deadline or 'None'})" for task in remaining_tasks
     ] if remaining_tasks else ["All tasks completed!"]
     
-    total_remaining_hours = sum(t.estimate_hours for t in remaining_tasks)
-    
-   prompt = f"""
+        total_remaining_hours = sum(t.estimate_hours for t in remaining_tasks)
+
+    prompt = f"""
 You are Momentum AI, an expert productivity strategist.
 
 You are NOT a chatbot.
